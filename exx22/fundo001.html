@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo001</title>
+    <style>
+        /*Sites lentos são menos valorizados por sites/app's de busca como Google.*/
+        body{
+            background-image: url(imagens/wallpaper001.jpg);
+        }
+        div.quadrado:hover, div#q2:hover{
+            background-image: linear-gradient(to bottom, #3198E2, #6D59C0, #B93590, #E33F5F, #FDD579);
+            box-shadow: 0.5px 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+        div.quadrado{
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: lightgray;
+            width: 190px;
+            height: 190px;
+        }
+        div#q1{
+            background-color: skyblue;
+        }
+        div#q2{
+            background-image: linear-gradient(to bottom, yellow, red);
+        }
+        div#q3{
+            background-image: url(imagens/pattern003.png);
+        }
+        p{
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            height: 18px;
+            width: 102px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="q1">
+
+    </div>
+    <div class="quadrado" id="q2">
+
+    </div>
+    <div class="quadrado" id="q3">
+
+    </div>
+    <p>Aula do vídeo</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9hV5oXi80-A?si=kAzq3354OwtcfPHq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
