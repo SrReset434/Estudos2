@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #game-board {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            border: 1px solid black;
+        }
+        .dot {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-board"></div>
+    <script>
+        var dotSize = 20;
+        var gameBoardSize = 400;
+        var direction = 'right';
+        var snake = [{ top: 0, left: 0 }];
+        var apple = null;
+
+        function updateGame() {
+            var head = Object.assign({}, snake[0]); // copy head
+            switch(direction) {
+                case 'left':
+                    head.left -= dotSize;
+                    break;
+                case 'right':
+                    head.left += dotSize;
+                    break;
+                case 'up':
+                    head.top -= dotSize;
+                    break;
+                case 'down':
+                    head.top += dotSize;
+                    break;
+            }
+
+            if (head.top < 0 || head.left < 0 || head.top === gameBoardSize || head.left === gameBoardSize) {
+                return gameOver();
+            }
+
+            if (apple && apple.top === head.top && apple.left === head.left) {
+                apple = null;
+            } else {
+                snake.pop();
+            }
+
+            snake.unshift(head);
+
+            if (apple === null) {
+                apple = makeNewApple();
+            }
+
+            drawGame();
+        }
+
+        function drawGame() {
+            var gameBoard = document.getElementById('game-board');
+            gameBoard.innerHTML = '';
+            snake.forEach(function(dot) {
+                gameBoard.appendChild(makeDotElement(dot));
+            });
+            gameBoard.appendChild(makeDotElement(apple));
+        }
+
+        function makeDotElement(dot) {
+            var dotElement = document.createElement('div');
+            dotElement.classList.add('dot');
+            dotElement.style.left = `${dot.left}px`;
+            dotElement.style.top = `${dot.top}px`;
+            return dotElement;
+        }
+
+        function makeNewApple() {
+            return {
+                top: Math.floor(Math.random() * gameBoardSize / dotSize) * dotSize,
+                left: Math.floor(Math.random() * gameBoardSize / dotSize) * dotSize,
+            };
+        }
+
+        function gameOver() {
+            clearInterval(gameIntervalID);
+        }
+
+        window.addEventListener('keydown', function(e) {
+            switch(e.key) {
+                case 'ArrowUp':
+                    direction = 'up';
+                    break;
+                case 'ArrowDown':
+                    direction = 'down';
+                    break;
+                case 'ArrowLeft':
+                    direction = 'left';
+                    break;
+                case 'ArrowRight':
+                    direction = 'right';
+                    break;
+            }
+        });
+
+        var gameIntervalID = setInterval(updateGame, 200);
+    </script>
+</body>
+</html>

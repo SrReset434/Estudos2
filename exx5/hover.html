@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de hover.</title>
+    <style>
+        /*
+        # = ID
+        . = class
+        : = pseudo-class
+       :: = pseudo elementos
+       > = Filho.
+        */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div > p{
+            display: none;
+        }
+        div:hover > p{
+            display: block;
+            color: white;
+            background-color: red;
+            width: 100px;
+        }
+        div:hover{
+            color: red;
+        }
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: darkred
+        }
+        a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+        a:active{
+            color: yellow;
+        }
+        a::after{
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+        a::before{
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover.</h1>
+    <p>Passe o mouse sobre o texto.</p>
+    <div>
+        Passe o mouse aqui.
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do exemplo</p>
+    <ul>
+        <li><a href="https://www.youtube.com/">Youtube.</a></li>
+        <li><a href="https://www.roblox.com/home">Roblox.</a></li>
+        <li><a href="https://www.instagram.com/p/C3pvZGhMCkF/">Télico com seu olhar de morte..</a></li>
+    </ul>
+</body>
+</html>

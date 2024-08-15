@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+    background-color: black
+}
+.Pag2{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   box-sizing: border-box;
+   transition: transform 200ms ease-in-out;
+padding: 15px 45px;
+background-color: transparent;
+border: 2px solid rgb(241, 6, 241);
+color: rgb(241, 6, 241);
+font-size: 20px;
+}
+button:hover{
+    box-shadow: 0  0 15px rgb(241, 6, 241), inset 0  0 15px rgb(241, 6, 241);
+    text-shadow: 0  0 15px rgb(241, 6, 241);
+    transition: all 0.3s ease-in-out;
+}
+

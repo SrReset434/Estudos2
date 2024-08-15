@@ -1,0 +1,11 @@
+@charset "UTF-8";
+body{
+    background-color: gray;
+}
+.text{
+    display: grid;
+    place-items: center;
+}
+.terceirapágina{
+    color: blue;
+}
