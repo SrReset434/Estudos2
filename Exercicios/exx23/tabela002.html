@@ -8,16 +8,42 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+        caption{
+            background-color: rgba(0, 0, 0, 0.808);
+            color: white;
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+            padding: 5px;
+            margin-bottom: 2px;
+        }
         table{
-            width: 500px;
+            width: 650px;
+            border-collapse: collapse;
         }
         td, th{
             border: 1px solid black;
             padding: 10px;
         }
         thead, tfoot{
-            background-color: gray;
+            background-color: rgba(0, 0, 0, 0.808);
             color: white;
+        }
+        td.notas{
+            text-align: center;
+        }
+        #passei{
+            background-color: rgb(14, 230, 14);
+            color: black;
+        }
+        div{
+            background-color:rgb(14, 230, 14); 
+            border: 1px solid black; 
+            width: 100px;
+            height: 100px; 
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -26,6 +52,7 @@
     <!--
     ANATOMIA PARA TABELAS GRANDES
     TABLE
+        CAPTION = LEGENDA
         THEAD
             TR, TD, TH
         TBODY
@@ -34,30 +61,97 @@
         TR, TD, TH    
     -->
         <table>
+            <caption>
+                <h3>Minhas notas escolares do 8 ano de 2024</h3>
+            </caption>
             <thead>
                 <tr>
-                    <th>Estado</th>
-                    <th>População</th>
+                    <th scope="col">Diciplinas</th>
+                    <th scope="col">1 Bimestre</th>
+                    <th scope="col">2 Bimestre</th>
+                    <th scope="col">3 Bimestre</th>
+                    <th scope="col">4 Bimestre</th>
+                    <th scope="col">Anual</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>São paulo</td>
-                    <td>45 919 049</td>
+                    <td>Língua portuguesa</td>
+                    <td class="notas">9,2</td>
+                    <td class="notas">9,0</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                </tr>
+                <tr id="passei">
+                    <td>Língua Inglesa</td>
+                    <td class="notas">9,5</td>
+                    <td class="notas">9,5</td>
+                    <td class="notas">9,0</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                </tr>
+                <tr id="passei">
+                    <td>Artes</td>
+                    <td class="notas">10,0</td>
+                    <td class="notas">9,0</td>
+                    <td class="notas">10,0</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
                 </tr>
                 <tr>
-                    <td>Minas Gerais</td>
-                    <td>21 168 943</td>
+                    <td>Educação Física</td>
+                    <td class="notas">8,5</td>
+                    <td class="notas">8,5</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                </tr>
+                <tr id="passei">
+                    <td>Matemáica</td>
+                    <td class="notas">6,5</td>
+                    <td class="notas">9,5</td>
+                    <td class="notas">8,8</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                </tr>
+                <tr id="passei">
+                    <td>Ciências</td>
+                    <td class="notas">10,0</td>
+                    <td class="notas">9,5</td>
+                    <td class="notas">10,0</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
                 </tr>
                 <tr>
-                    <td>Rio de Janeiro</td>
-                    <td>17 264 943</td>
+                    <td>História</td>
+                    <td class="notas">10,0</td>
+                    <td class="notas">9,5</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                </tr>
+                <tr>
+                    <td>Geografia</td>
+                    <td class="notas">8,0</td>
+                    <td class="notas">9,0</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                </tr>
+                <tr>
+                    <td>Ensino Religioso</td>
+                    <td class="notas">10,0</td>
+                    <td class="notas">9,5</td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
+                    <td class="notas"></td>
                 </tr>
             </tbody>
-            <tfoot>
-                <th>Total de habitantes.</th>
-                <td>Soma ai que da o resultado</td>
-            </tfoot>
         </table>
+        <br>
+        <div>
+            <p>Aprovado</p>
+        </div>
 </body>
 </html>
