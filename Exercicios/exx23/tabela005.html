@@ -20,29 +20,33 @@
             text-align: center;
             color: white;
         }
-        #cabeçalho{
-            background-color: gray;
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-            color: white;
-        }
         td, th{
             border: 1px solid black;
             padding: 10px;
             text-align: center;
+        }
+        col.nome{
+            background-color: gold;
+        }
+        col.grupo{
+            background-color: blue;
         }
     </style>
 </head>
 <body>
     <h1>Exercício de Tabela</h1>
     <table>
+        <colgroup>
+            <col class="nome">
+            <col class="grupo" span="3">
+            <col class="profissão">
+        </colgroup>
         <caption>Cadastro</caption>
         <tr>
-            <th id="cabeçalho" scope="col">Nome</th>
-            <th id="cabeçalho" scope="col">Sexo</th>
-            <th id="cabeçalho" scope="col">Idade</th>
-            <th id="cabeçalho" scope="col">Profissão</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
         </tr>
         <tr>
             <td>Ana maria</td>
