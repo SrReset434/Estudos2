@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Diferente</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px 20px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tbody tr {
+                margin: 0 0 1rem 0;
+                border: 1px solid #ddd;
+            }
+            tbody tr:nth-child(even) {
+                background-color: transparent;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Relatório Mensal de Vendas</caption>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Jan</th>
+                <th>Fev</th>
+                <th>Mar</th>
+                <th>Abr</th>
+                <th>Mai</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Ago</th>
+                <th>Set</th>
+                <th>Out</th>
+                <th>Nov</th>
+                <th>Dez</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Produto">PS4</td>
+                <td data-label="Jan">100</td>
+                <td data-label="Fev">120</td>
+                <td data-label="Mar">130</td>
+                <td data-label="Abr">140</td>
+                <td data-label="Mai">150</td>
+                <td data-label="Jun">160</td>
+                <td data-label="Jul">170</td>
+                <td data-label="Ago">180</td>
+                <td data-label="Set">190</td>
+                <td data-label="Out">200</td>
+                <td data-label="Nov">210</td>
+                <td data-label="Dez">220</td>
+            </tr>
+            <tr>
+                <td data-label="Produto">Xbox One</td>
+                <td data-label="Jan">90</td>
+                <td data-label="Fev">100</td>
+                <td data-label="Mar">110</td>
+                <td data-label="Abr">120</td>
+                <td data-label="Mai">130</td>
+                <td data-label="Jun">140</td>
+                <td data-label="Jul">150</td>
+                <td data-label="Ago">160</td>
+                <td data-label="Set">170</td>
+                <td data-label="Out">180</td>
+                <td data-label="Nov">190</td>
+                <td data-label="Dez">200</td>
+            </tr>
+            <tr>
+                <td data-label="Produto">Nintendo Switch</td>
+                <td data-label="Jan">80</td>
+                <td data-label="Fev">90</td>
+                <td data-label="Mar">100</td>
+                <td data-label="Abr">110</td>
+                <td data-label="Mai">120</td>
+                <td data-label="Jun">130</td>
+                <td data-label="Jul">140</td>
+                <td data-label="Ago">150</td>
+                <td data-label="Set">160</td>
+                <td data-label="Out">170</td>
+                <td data-label="Nov">180</td>
+                <td data-label="Dez">190</td>
+            </tr>
+            <tr>
+                <td data-label="Produto">Smart TV</td>
+                <td data-label="Jan">70</td>
+                <td data-label="Fev">75</td>
+                <td data-label="Mar">80</td>
+                <td data-label="Abr">85</td>
+                <td data-label="Mai">90</td>
+                <td data-label="Jun">95</td>
+                <td data-label="Jul">100</td>
+                <td data-label="Ago">105</td>
+                <td data-label="Set">110</td>
+                <td data-label="Out">115</td>
+                <td data-label="Nov">120</td>
+                <td data-label="Dez">125</td>
+            </tr>
+            <tr>
+                <td data-label="Produto">Notebook</td>
+                <td data-label="Jan">60</td>
+                <td data-label="Fev">65</td>
+                <td data-label="Mar">70</td>
+                <td data-label="Abr">75</td>
+                <td data-label="Mai">80</td>
+                <td data-label="Jun">85</td>
+                <td data-label="Jul">90</td>
+                <td data-label="Ago">95</td>
+                <td data-label="Set">100</td>
+                <td data-label="Out">105</td>
+                <td data-label="Nov">110</td>
+                <td data-label="Dez">115</td>
+            </tr>
+            <tr>
+                <td data-label="Produto">Smartphone</td>
+                <td data-label="Jan">150</td>
+                <td data-label="Fev">160</td>
+                <td data-label="Mar">170</td>
+                <td data-label="Abr">180</td>
+                <td data-label="Mai">190</td>
+                <td data-label="Jun">200</td>
+                <td data-label="Jul">210</td>
+                <td data-label="Ago">220</td>
+                <td data-label="Set">230</td>
+                <td data-label="Out">240</td>
+                <td data-label="Nov">250</td>
+                <td data-label="Dez">260</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
