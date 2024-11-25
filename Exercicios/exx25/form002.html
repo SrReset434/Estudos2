@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <!-- "minlength" é utilizado para definir o mínimo de caracteres num campo. "maxktlength" é utilizado para definir o máximo de caracteres num campo. "requiered" faz com que seja obrigatório o campo ser prenchido. "size" define o tanto de letrar que ele vai mostrar, para melhor explicação testar a tag. "placeholder" é um texto que fica dentro do campo que vai ser prenchido que mostra alguma dica ou informação, o texto é apagado após escrever algo no campo.-->
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusuário">Usuário:</label>
+            <input type="text" name="usuário" id="iusuário" required minlength="4" maxktlength="20" size="20" placeholder="mínimo de 4 caracteres." autocomplete="username">
+        </p>
+        <p>
+            <label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha" required minlength="5" size="18" placeholder="mínimo de 5 caracteres." autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar.">
+            <input type="reset" value="Limpar.">
+        </p>
+    </form>
+</body>
+</html>
