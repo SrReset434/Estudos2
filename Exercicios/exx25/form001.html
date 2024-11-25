@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Estudar no futuro sobre https, para proteção de dados. -->
+    <h1>Meu primeiro formulário.</h1>
+    <form action="cadastro.php" method="post" autocomplete="off"> <!-- O action diz para qual linguagem você vai mandar o formulário, pode ser php como está aqui ou javascript dentre outras. -->
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome">
+        </p>
+
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p><input type="submit" value="Enviar."></p>
+    </form>
+
+    <!-- O GET não pode ser o utilizado se ultrapassar 3000 bytes = 3 mil letras (contando os dados e informações dentro do formulário), o GET não deve ser utilizado se o formulário contar com informações sensíveis, ex: CPF, CEP, cartão de crédito e etc. -->
+
+    <!-- O POST deve ser utilizado quando houver dados sensíveis: CPF, CEP, senha, cartão de crédito e etc. Quando houver envio de fotos ou arquivos pelo formulário também. Quando seus dados passarem de 3000 bytes. Quando você não quiser que as informações que foram colocadas no formulário apareça na URL.  -->
+</body>
+</html>
