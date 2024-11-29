@@ -14,8 +14,9 @@
     </style>
 </head>
 <body>
+    <!--Quando utilizar o "textarea" é recomendado que use o método "post", pois o tamanho da mensagem é ilimitado. O limite do "get" é 3000 bytes.-->
     <h1>Teste de formulário</h1>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post">
         <p>
             <label for="iest">Estado:</label>
             <select name="estado" id="estado">
@@ -68,6 +69,10 @@
                 <option value="PROF">Professor</option>
                 <option value="DEV">Desenvolvedor</option>
             </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem:</label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
         </p>
         <p>
             <input type="submit" value="Enviar">
