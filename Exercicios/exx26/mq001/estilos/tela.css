@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* Estilo para telas */
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background-color: black;
+  }
+  
+  ul{
+    margin-bottom: 2px;
+  }
+
+  header > h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: 1px;
+    margin-bottom: 5px;
+  }
+
+  menu ul{
+    list-style-type: none;
+  }
+
+  ul a{
+    text-decoration: none;
+  }
+
+  ul a:hover{
+    text-decoration: underline;
+  }
+  
+  menu ul{
+    background-color: gray;
+    display: in;
+  }
+
+  menu li{
+    display: inline-block;
+    padding: 10px;
+    background-color: lightgray;
+  }
+
+  main > article > h2{
+    color: white;
+    text-align: center;
+    margin: 2px;
+  }
+
+  main > article > p{
+    color: black;
+    margin-left: 5px;
+    background-color: white;
+    width: 600px;
+    display: block;
+    margin: auto;
+  }
