@@ -21,18 +21,41 @@ header > h1{
     text-align: center;
 }
 
-header > menu > ul{
-    list-style-type: none;
+span#burguer{
+    background-color: rgb(48, 48, 48);
+    font-size: 28px;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px;
 }
 
-header > menu > ul > li{
-    display: inline-block;
+span#burguer:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.5s
+}
+
+span#burguer:not(:hover){
+    transition-duration: 0.5s;
+}
+
+header > menu > ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+menu{
+    text-align: center;
+    display: none;
 }
 
 menu > ul > li > a{
     background-color: rgb(87, 87, 87);
     padding: 10px;
     text-decoration: none;
+    display: block;
     color: white;
     font-weight: bold;
     text-align: center;
@@ -43,8 +66,6 @@ menu > ul > li > a{
 menu > ul > li > a:hover{
     background-color: gray;
     color: black;
-    scale: 1px;
-    padding: 12px;
     transition-duration: 0.5s;
 }
 
@@ -55,18 +76,18 @@ menu > ul > li > a:not(:hover){
 main{
     background-color: white;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 10px;
     border-radius: 10px;
     width: 94vw;
 }
 
 article > p{
+    padding-bottom: 20px;
+}
+
+article > p{
     text-align: justify;
     margin-bottom: 20px;
     text-indent: 20px;
-}
-
-#oi{
-    text-align: center;
 }

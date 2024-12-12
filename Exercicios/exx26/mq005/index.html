@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Media queries</title>
 </head>
 <body>
     <header>
         <h1>Meu site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
         <menu id="itens">
             <ul>
                 <li>
@@ -43,5 +45,14 @@
             <p>A escola é um ambiente fundamental para o desenvolvimento de crianças e adolescentes. É um espaço onde o aprendizado vai além das paredes da sala de aula, envolvendo tanto o conhecimento acadêmico quanto o crescimento pessoal. Dentro de suas instalações, os alunos têm a oportunidade de se envolver em diversas atividades, desde o estudo de matérias essenciais como matemática e ciências até práticas esportivas e artes. A escola também desempenha um papel crucial na formação de valores e na construção de relacionamentos sociais.</p>
         </article>
     </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else{
+                itens.style.display = 'block'
+            }
+        } 
+    </script>
 </body>
 </html>
