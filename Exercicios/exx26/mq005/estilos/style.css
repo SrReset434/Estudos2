@@ -61,6 +61,7 @@ menu > ul > li > a{
     text-align: center;
     border-top: 2px solid gray;
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 menu > ul > li > a:hover{

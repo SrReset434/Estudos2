@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* Typical device Breakpoints 
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop:992 até 1200px
+Grandes telas: Acima de 1200px.
+*/
+
+
+
+@media  screen and (min-width: 768px) {
+    header{
+    padding-bottom: 0px;    
+    }
+
+    menu{
+        display: inline-block; /* Se colocarmos !important aqui, resolve o mesmo problema que o código JavaScript resolve. */
+    }
+    menu > ul > li > a{
+        margin: 0px;
+    }
+
+    menu > ul > li{
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    menu > ul > li > a:hover{
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    span#burguer{
+        display: none;
+    }
+
+    main{
+        width: 768px;
+    }
+}
+
